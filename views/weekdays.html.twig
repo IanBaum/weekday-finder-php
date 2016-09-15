@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Weekday Finder</title>
+</head>
+<body>
+  <div class="container">
+  <h1> Weekday Finder</h1>
+  <form action="find_weekday">
+    <div class="form-group">
+      <h3>Month</h3>
+      <select class="form-control">
+        <option name="month" value="6">January</option>
+        <option name="month" value="2">Febuary</option>
+        <option name="month" value="2">March</option>
+        <option name="month" value="5">April</option>
+        <option name="month" value="0">May</option>
+        <option name="month" value="3">June</option>
+        <option name="month" value="5">July</option>
+        <option name="month" value="1">August</option>
+        <option name="month" value="4">September</option>
+        <option name="month" value="6">October</option>
+        <option name="month" value="2">November</option>
+        <option name="month" value="4">December</option>
+      </select>
+
+      <h3>Day</h3>
+      <select class="form-control">
+        {% for i in 1..31 %}
+        <option name="date" value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+      </select>
+
+      <form action="find_weekday">
+        <h3>Year</h3>
+        <select class="form-control">
+          <option name="year" value="0">2000</option>
+          <option name="year" value="1">2001</option>
+          <option name="year" value="2">2002</option>
+          <option name="year" value="3">2003</option>
+
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+</html>
